@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<application xmlns="http://ns.adobe.com/air/application/32.0">
+    <id>com.distriqt.test.empty</id>
+    <filename>Main</filename>
+    <name>Main</name>
+    <versionNumber>0.0.0</versionNumber>
+
+    <initialWindow>
+        <content>SWF file name is set automatically at compile time</content>
+        <visible>true</visible>
+        <autoOrients>true</autoOrients>
+        <fullScreen>true</fullScreen>
+    </initialWindow>
+
+    <android>
+        <manifestAdditions><![CDATA[
+            <manifest android:installLocation="auto">
+                <uses-permission android:name="android.permission.INTERNET"/>
+            </manifest>
+        ]]></manifestAdditions>
+    </android>
+
+</application>
