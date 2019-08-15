@@ -86,3 +86,21 @@ In order for certain features of the extension to operate correctly you must add
     )></manifestAdditions>
 </android>
 ```
+
+
+
+## Supported
+
+You should always check whether the extension is supported before making calls. 
+This allows you to react to whether the functionality is available on the device.
+
+```as3
+if (PackageManager.isSupported)
+{
+	//	Functionality here
+}
+```
+
+
+
+
