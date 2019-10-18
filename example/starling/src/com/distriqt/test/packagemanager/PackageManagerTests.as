@@ -120,7 +120,6 @@ package com.distriqt.test.packagemanager
 			else
 			{
 				log( "canRequestApplicationInstalls() = false" );
-				
 			}
 		}
 

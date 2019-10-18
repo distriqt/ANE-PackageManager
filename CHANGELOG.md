@@ -1,5 +1,12 @@
 
 
+###### 2019.10.18 [v2.0.015]
+
+```
+Resolved install apk permissions issue with older Android versions (resolves #2)
+```
+
+
 ###### 2019.08.15 [v2.0.003]
 
 ```

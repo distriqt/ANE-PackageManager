@@ -40,13 +40,15 @@
 			]]>
 		</Entitlements>
 	</iPhone>
-	
+
+
 	<android>
 		<manifestAdditions><![CDATA[
 			<manifest android:installLocation="auto" >
 				<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="28" />
 
 				<uses-permission android:name="android.permission.INTERNET"/>
+				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 				<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
 				<application>
@@ -75,11 +77,13 @@
 			</manifest>
 		]]></manifestAdditions>
 	</android>
-	
+
+
 	<extensions>
 		<extensionID>com.distriqt.Core</extensionID>
 		<extensionID>com.distriqt.PackageManager</extensionID>
         <extensionID>com.distriqt.androidsupport.V4</extensionID>
 	</extensions>
-	
+
+
 </application>

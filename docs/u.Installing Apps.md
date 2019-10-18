@@ -22,7 +22,10 @@ Apps that haven't declared this permission cannot install other apps, a handy se
 
 
 
-In order to correctly access the APK file you will also need to add the following file provider to the manifest **inside the `application` tag**:
+In order to correctly access the APK file you will also need to add the following file provider to the manifest **inside the `application` tag**.
+
+You will need to replace `APPLICATION_PACKAGE` with your applications package name, generally your AIR application id prepended with `air.` eg `air.com.distriqt.test`
+
 
 ```xml
 <provider

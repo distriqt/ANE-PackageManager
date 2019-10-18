@@ -66,12 +66,14 @@ The following should be added to your `extensions` node in your application desc
 
 In order for certain features of the extension to operate correctly you must add the following to your manifest additions node of your application descriptor.
 
+
+
 ```xml
 <android>
     <manifestAdditions><![CDATA[
         <manifest android:installLocation="auto" >
             <uses-permission android:name="android.permission.INTERNET"/>
-            
+
             <application>
 
                 <receiver android:name="com.distriqt.extension.packagemanager.receivers.PackageManagerReceiver" android:enabled="true" android:exported="true" >
