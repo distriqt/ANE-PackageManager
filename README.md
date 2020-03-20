@@ -4,10 +4,10 @@ built by [distriqt //](https://airnativeextensions.com)
 
 # PackageManager
 
-PackageManager is an AIR Native Extension to access certain features of the Android package manager. 
+The [PackageManager](https://airnativeextensions.com/extension/com.distriqt.PackageManager) extension gives access to certain features of the Android package manager.
 
 
-### Features
+### Features:
 
 - Receive package added and removed events when other applications are installed or removed from the device
 - Single API interface - your code works across supported platforms with no modifications
@@ -15,10 +15,11 @@ PackageManager is an AIR Native Extension to access certain features of the Andr
 
 
 
-
 ## Documentation
 
-Latest documentation can be found in the [wiki](https://github.com/distriqt/ANE-PackageManager/wiki)
+
+The [wiki](https://github.com/distriqt/ANE-PackageManager/ forms the best source of detailed documentation for the extension along with the [asdocs](https://distriqt.github.io/ANE-PackageManager/asdocs). 
+
 
 Quick Example: 
 
@@ -30,7 +31,6 @@ function packageRemovedHandler( event:PackageManagerEvent ):void
 	trace( "Package Removed::"+ event.packageName );
 }
 ```
-
 
 More information here: 
 
@@ -44,6 +44,7 @@ You can purchase a license for using this extension:
 [airnativeextensions.com](https://airnativeextensions.com/)
 
 distriqt retains all copyright.
+
 
 
 ![](images/promo.png)
