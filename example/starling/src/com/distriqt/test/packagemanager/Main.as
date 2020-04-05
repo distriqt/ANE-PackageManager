@@ -103,6 +103,8 @@ package com.distriqt.test.packagemanager
 			addAction( "Listen", _tests.listen );
 			addAction( "Installer", _tests.getInstaller );
 			
+			addAction( "Installed Applications", _tests.getInstalledApplications );
+			addAction( "Installed Applications Async", _tests.getInstalledApplicationsAsync );
 			
 			addAction( "Install App", _tests.appInstall );
 			addAction( "Show Install Settings", _tests.showManageUnknownAppSourcesSettings );

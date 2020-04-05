@@ -14,6 +14,7 @@
  */
 package com.distriqt.test.packagemanager
 {
+	import com.distriqt.extension.packagemanager.PackageInfo;
 	import com.distriqt.extension.packagemanager.PackageManager;
 	import com.distriqt.extension.packagemanager.events.PackageManagerEvent;
 	
@@ -22,6 +23,7 @@ package com.distriqt.test.packagemanager
 	import flash.geom.Rectangle;
 	import flash.net.URLRequest;
 	import flash.net.navigateToURL;
+	import flash.utils.getTimer;
 	import flash.utils.setTimeout;
 	
 	import starling.core.Starling;
@@ -95,6 +97,66 @@ package com.distriqt.test.packagemanager
 		}
 		
 		
+		
+		//
+		//	INSTALLED APPLICATIONS
+		//
+		
+		public function getInstalledApplications():void
+		{
+			log( "getInstalledApplications()" );
+			var startTime:int = getTimer();
+			var installedPackages:Array = PackageManager.service.getInstalledApplications();
+			log( "getInstalledApplications(): native complete: " + String(getTimer() - startTime)  );
+			if (installedPackages != null)
+			{
+				printPackages( installedPackages );
+			}
+			else
+			{
+				log( "not supported" );
+			}
+			log( "getInstalledApplications(): print complete: " + String(getTimer() - startTime)  );
+		}
+		
+		
+		public function getInstalledApplicationsAsync():void
+		{
+			log( "getInstalledApplicationsAsync()" );
+			var startTime:int = getTimer();
+			
+			//
+			//	You can use either a callback function or the event (or both)
+			//
+			
+			PackageManager.service.addEventListener( PackageManagerEvent.GET_INSTALLED_APPLICATIONS, getInstalledApplicationsHandler );
+			
+			PackageManager.service.getInstalledApplicationsAsync(
+					function( installedPackages:Array ):void
+					{
+						log( "getInstalledApplicationsAsync(): callback: " + String(getTimer() - startTime)  );
+						printPackages( installedPackages );
+					}
+			);
+			log( "getInstalledApplicationsAsync(): complete: " + String(getTimer() - startTime)  );
+		}
+		
+		private function getInstalledApplicationsHandler( event:PackageManagerEvent ):void
+		{
+			printPackages( event.data );
+		}
+		
+		
+		private function printPackages( installedPackages:Array ):void
+		{
+			if (installedPackages != null)
+			{
+				for each (var packageInfo:PackageInfo in installedPackages)
+				{
+					log( "package: " + packageInfo.toString() );
+				}
+			}
+		}
 		
 		
 		//

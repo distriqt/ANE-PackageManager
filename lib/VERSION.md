@@ -1,1 +1,1 @@
-| com.distriqt.PackageManager | 3.0.017 |
+| com.distriqt.PackageManager | 3.1.024 |

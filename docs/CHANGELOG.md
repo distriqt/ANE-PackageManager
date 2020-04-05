@@ -1,5 +1,12 @@
 
 
+###### 2020.04.06 [v3.1.025]
+
+```
+Added ability to retrieve a list of installed application packages (resolves #4)
+```
+
+
 ###### 2020.03.20 [v3.0.018]
 
 ```
