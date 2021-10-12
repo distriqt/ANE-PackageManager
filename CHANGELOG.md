@@ -1,3 +1,9 @@
+###### 2021.10.12 [v3.2.2]
+
+```
+Add kill process functionality (resolves #6)
+```
+
 
 
 ###### 2020.04.06 [v3.1.025]

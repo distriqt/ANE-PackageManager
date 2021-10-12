@@ -109,6 +109,7 @@ package com.distriqt.test.packagemanager
 			addAction( "Install App", _tests.appInstall );
 			addAction( "Show Install Settings", _tests.showManageUnknownAppSourcesSettings );
 			
+			addAction( "Kill Process", _tests.killProcess );
 			
 			addChild( _text );
 			addChild( _container );

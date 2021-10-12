@@ -1,14 +1,11 @@
 
-## Installing Applications
-
 **Android only**
-
 
 Remember that [Play policies](https://play.google.com/about/developer-content-policy/) still apply to apps distributed on Google Play if those apps can install and update other apps. 
 In the majority of cases, such behavior is inappropriate; you should instead provide a [deep link](https://developer.android.com/distribute/marketing-tools/linking-to-google-play.html) to the app's listing on the Play Store.
 
 
-### Manifest Additions
+## Manifest Additions
 
 
 If an app uses a targetSdkLevel of 26 or above and prompts the user to install other apps, the manifest file needs to include the `REQUEST_INSTALL_PACKAGES` permission.
@@ -44,7 +41,7 @@ You will need to replace `APPLICATION_PACKAGE` with your applications package na
 
 
 
-### Availability
+## Availability
 
 You can check whether the current device can install applications by checking the `canRequestApplicationInstalls` flag:
 
@@ -56,7 +53,7 @@ if (PackageManager.service.canRequestApplicationInstalls)
 ```
 
 
-### Settings
+## Settings
 
 You can redirect the user to the appropriate settings by calling `showManageUnknownAppSourcesSettings()`:
 
@@ -72,7 +69,7 @@ On older versions of Android it will redirect to the generic unknown sources set
 
 
 
-### Install
+## Install
 
 To install an application use the `installApplication()` method and pass the native path to an APK file:
 

@@ -1,11 +1,11 @@
 /**
- *        __       __               __ 
+ *        __       __               __
  *   ____/ /_ ____/ /______ _ ___  / /_
  *  / __  / / ___/ __/ ___/ / __ `/ __/
- * / /_/ / (__  ) / / /  / / /_/ / / 
- * \__,_/_/____/_/ /_/  /_/\__, /_/ 
- *                           / / 
- *                           \/ 
+ * / /_/ / (__  ) / / /  / / /_/ / /
+ * \__,_/_/____/_/ /_/  /_/\__, /_/
+ *                           / /
+ *                           \/
  * http://distriqt.com
  *
  * @author 		"Michael Archbold (ma&#64;distriqt.com)"
@@ -18,33 +18,25 @@ package com.distriqt.test.packagemanager
 	import com.distriqt.extension.packagemanager.PackageManager;
 	import com.distriqt.extension.packagemanager.events.PackageManagerEvent;
 	
-	import flash.display.Bitmap;
 	import flash.filesystem.File;
-	import flash.geom.Rectangle;
-	import flash.net.URLRequest;
-	import flash.net.navigateToURL;
 	import flash.utils.getTimer;
-	import flash.utils.setTimeout;
 	
-	import starling.core.Starling;
-	
-	import starling.display.Image;
 	import starling.display.Sprite;
 	
-	/**	
+	
+	/**
 	 */
 	public class PackageManagerTests extends Sprite
 	{
-		public static const TAG : String = "";
+		public static const TAG:String = "";
 		
-		private var _l : ILogger;
+		private var _l:ILogger;
+		
 		
 		private function log( log:String ):void
 		{
 			_l.log( TAG, log );
 		}
-		
-		
 		
 		
 		////////////////////////////////////////////////////////
@@ -82,9 +74,8 @@ package com.distriqt.test.packagemanager
 		
 		private function packageRemovedHandler( event:PackageManagerEvent ):void
 		{
-			log( event.type + "::"+ event.packageName );
+			log( event.type + "::" + event.packageName );
 		}
-		
 		
 		
 		//
@@ -97,7 +88,6 @@ package com.distriqt.test.packagemanager
 		}
 		
 		
-		
 		//
 		//	INSTALLED APPLICATIONS
 		//
@@ -107,7 +97,7 @@ package com.distriqt.test.packagemanager
 			log( "getInstalledApplications()" );
 			var startTime:int = getTimer();
 			var installedPackages:Array = PackageManager.service.getInstalledApplications();
-			log( "getInstalledApplications(): native complete: " + String(getTimer() - startTime)  );
+			log( "getInstalledApplications(): native complete: " + String( getTimer() - startTime ) );
 			if (installedPackages != null)
 			{
 				printPackages( installedPackages );
@@ -116,7 +106,7 @@ package com.distriqt.test.packagemanager
 			{
 				log( "not supported" );
 			}
-			log( "getInstalledApplications(): print complete: " + String(getTimer() - startTime)  );
+			log( "getInstalledApplications(): print complete: " + String( getTimer() - startTime ) );
 		}
 		
 		
@@ -132,14 +122,15 @@ package com.distriqt.test.packagemanager
 			PackageManager.service.addEventListener( PackageManagerEvent.GET_INSTALLED_APPLICATIONS, getInstalledApplicationsHandler );
 			
 			PackageManager.service.getInstalledApplicationsAsync(
-					function( installedPackages:Array ):void
+					function ( installedPackages:Array ):void
 					{
-						log( "getInstalledApplicationsAsync(): callback: " + String(getTimer() - startTime)  );
+						log( "getInstalledApplicationsAsync(): callback: " + String( getTimer() - startTime ) );
 						printPackages( installedPackages );
 					}
 			);
-			log( "getInstalledApplicationsAsync(): complete: " + String(getTimer() - startTime)  );
+			log( "getInstalledApplicationsAsync(): complete: " + String( getTimer() - startTime ) );
 		}
+		
 		
 		private function getInstalledApplicationsHandler( event:PackageManagerEvent ):void
 		{
@@ -168,11 +159,11 @@ package com.distriqt.test.packagemanager
 			log( "appInstall()" );
 			if (PackageManager.service.canRequestApplicationInstalls)
 			{
-				var apkFile:File = File.applicationStorageDirectory.resolvePath("Main.apk");
+				var apkFile:File = File.applicationStorageDirectory.resolvePath( "Main.apk" );
 				if (!apkFile.exists)
 				{
 					log( "copying apk" );
-					File.applicationDirectory.resolvePath("assets/Main.apk").copyTo( apkFile );
+					File.applicationDirectory.resolvePath( "assets/Main.apk" ).copyTo( apkFile );
 					log( "copying apk complete" );
 				}
 				
@@ -184,7 +175,7 @@ package com.distriqt.test.packagemanager
 				log( "canRequestApplicationInstalls() = false" );
 			}
 		}
-
+		
 		
 		public function showManageUnknownAppSourcesSettings():void
 		{
@@ -193,5 +184,18 @@ package com.distriqt.test.packagemanager
 		}
 		
 		
+		//
+		//	KILL PROCESS
+		//
+		
+		
+		public function killProcess():void
+		{
+			var processName:String = "";
+			var success:Boolean = PackageManager.service.killProcess( processName );
+			log( "killProcess(" + processName + ") = " + success );
+		}
+		
 	}
+	
 }

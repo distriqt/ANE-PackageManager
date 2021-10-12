@@ -1,6 +1,4 @@
 
-## Installed Application Information
-
 There are two methods to retrieve the installed application information, asynchronous and synchronous. We suggest the async method as it shouldn't affect the ui as much as the synchronous method may do, depending on the device and the number of applications installed.
 
 Which ever method you use, the end result is an `Array` of `PackageInfo` objects. These objects contain:
@@ -14,7 +12,7 @@ along with other information detailed in the asdocs.
 
 
 
-### Asynchronous retrieval
+## Asynchronous retrieval
 
 In order to retrieve a list of applications that are installed on the device call the `getInstalledApplicationsAsync()` function.
 
@@ -64,7 +62,7 @@ PackageManager.service.getInstalledApplicationsAsync(
 ```
 
 
-### Synchronous retrieval
+## Synchronous retrieval
 
 You can also call `getInstalledApplications()` to directly retrieve an array of the application package information however be aware that this call may take some time.
 
