@@ -10,7 +10,7 @@
  *
  * @file   		Main.as
  * @brief  		
- * @author 		"Michael Archbold (ma&#64;distriqt.com)"
+ * @author 		Michael Archbold (https://github.com/marchbold)
  * @created		Dec 4, 2017
  * @copyright	http://distriqt.com/copyright/license.txt
  */
@@ -18,15 +18,16 @@ package com.distriqt.test.packagemanager
 {
 	import feathers.controls.Button;
 	import feathers.controls.ScrollContainer;
+	import feathers.layout.HorizontalAlign;
+	import feathers.layout.VerticalAlign;
 	import feathers.layout.VerticalLayout;
 	import feathers.themes.MetalWorksMobileTheme;
 	
 	import starling.display.Sprite;
 	import starling.events.Event;
 	import starling.text.TextField;
+	import starling.text.TextFormat;
 	import starling.utils.Color;
-	import starling.utils.HAlign;
-	import starling.utils.VAlign;
 	
 	/**	
 	 * 
@@ -78,15 +79,14 @@ package com.distriqt.test.packagemanager
 		
 		private function createUI():void
 		{
-			_text = new TextField( stage.stageWidth, stage.stageHeight, "", "_typewriter", 18, Color.WHITE );
-			_text.hAlign = HAlign.LEFT; 
-			_text.vAlign = VAlign.TOP;
+			var tf:TextFormat = new TextFormat( "_typewriter", 12, Color.WHITE, HorizontalAlign.LEFT, VerticalAlign.TOP );
+			_text = new TextField( stage.stageWidth, stage.stageHeight, "", tf );
 			_text.y = 40;
 			_text.touchable = false;
 			
 			var layout:VerticalLayout = new VerticalLayout();
-			layout.horizontalAlign = VerticalLayout.HORIZONTAL_ALIGN_RIGHT;
-			layout.verticalAlign = VerticalLayout.VERTICAL_ALIGN_BOTTOM;
+			layout.horizontalAlign = HorizontalAlign.RIGHT;
+			layout.verticalAlign = VerticalAlign.BOTTOM;
 			layout.gap = 5;
 			
 			_container = new ScrollContainer();
@@ -111,6 +111,7 @@ package com.distriqt.test.packagemanager
 			
 			addAction( "Kill Process", _tests.killProcess );
 			
+			addChild( _tests );
 			addChild( _text );
 			addChild( _container );
 		}

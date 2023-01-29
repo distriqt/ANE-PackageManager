@@ -18,7 +18,7 @@ The [PackageManager](https://airnativeextensions.com/extension/com.distriqt.Pack
 ## Documentation
 
 
-The [wiki](https://github.com/distriqt/ANE-PackageManager/ forms the best source of detailed documentation for the extension along with the [asdocs](https://distriqt.github.io/ANE-PackageManager/asdocs). 
+The [documentation site](https://docs.airnativeextensions.com/docs/packagemanager/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/packagemanager). 
 
 
 Quick Example: 

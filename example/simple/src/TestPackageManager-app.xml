@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/32.0">
+<application xmlns="http://ns.adobe.com/air/application/50.1">
     <id>com.distriqt.test</id>
     <filename>TestPackageManager</filename>
     <name>TestPackageManager</name>
@@ -33,6 +33,10 @@
 				<string>1</string>
 				<string>2</string>
 			</array>
+
+            <key>MinimumOSVersion</key>
+            <string>11.0</string>
+
 		]]></InfoAdditions>
         <requestedDisplayResolution>high</requestedDisplayResolution>
         <Entitlements>
