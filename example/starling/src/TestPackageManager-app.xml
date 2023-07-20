@@ -51,11 +51,13 @@
     <android>
         <manifestAdditions><![CDATA[
             <manifest android:installLocation="auto" >
-                <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="29" />
+                <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="33" />
 
                 <uses-permission android:name="android.permission.INTERNET"/>
                 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
                 <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+                <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 
                 <application>
 

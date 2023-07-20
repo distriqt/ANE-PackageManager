@@ -1,3 +1,9 @@
+###### 2023.07.20 [v3.4.0]
+
+```
+feat(android): add ability to query a single package name for PackageInfo
+```
+
 ###### 2023.01.29 [v3.3.0]
 
 ```
