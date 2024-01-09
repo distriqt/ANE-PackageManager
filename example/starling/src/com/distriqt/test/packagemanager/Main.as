@@ -110,7 +110,10 @@ package com.distriqt.test.packagemanager
 			addAction( "Show Install Settings", _tests.showManageUnknownAppSourcesSettings );
 			
 			addAction( "Kill Process", _tests.killProcess );
-			
+
+			addAction( "Validate Signature", _tests.validateSignature );
+
+
 			addChild( _tests );
 			addChild( _text );
 			addChild( _container );

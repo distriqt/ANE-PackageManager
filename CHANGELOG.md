@@ -1,3 +1,9 @@
+###### 2024.01.09 [v3.4.1]
+
+```
+feat(android): add ability to use hex sha1 signature string in validateSignature (resolves #10)
+```
+
 ###### 2023.07.20 [v3.4.0]
 
 ```
