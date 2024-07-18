@@ -208,6 +208,19 @@ package com.distriqt.test.packagemanager
 		}
 
 
+
+
+		//
+		//	HAS FEATURE
+		//
+
+		public function hasFeature():void
+		{
+			var hasFeature:Boolean = PackageManager.service.hasSystemFeature( "org.chromium.arc.device_management" );
+			log( "hasFeature( org.chromium.arc.device_management ): " + hasFeature );
+		}
+
+
 	}
 
 }

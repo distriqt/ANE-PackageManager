@@ -2,4 +2,4 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.PackageManager | 3.4.1 |  |  |
+| com.distriqt.PackageManager | 3.5.0 |  |  |

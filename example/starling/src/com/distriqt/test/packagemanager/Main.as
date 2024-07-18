@@ -112,6 +112,7 @@ package com.distriqt.test.packagemanager
 			addAction( "Kill Process", _tests.killProcess );
 
 			addAction( "Validate Signature", _tests.validateSignature );
+			addAction( "Has Feature", _tests.hasFeature );
 
 
 			addChild( _tests );

@@ -1,3 +1,9 @@
+###### 2024.07.18 [v3.5.0]
+
+```
+feat(android): add hasSystemFeature method
+```
+
 ###### 2024.01.09 [v3.4.1]
 
 ```
