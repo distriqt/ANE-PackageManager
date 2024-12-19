@@ -37,7 +37,7 @@
             <string>LaunchScreen</string>
 
             <key>MinimumOSVersion</key>
-            <string>11.0</string>
+            <string>12.0</string>
 
         ]]></InfoAdditions>
         <requestedDisplayResolution>high</requestedDisplayResolution>

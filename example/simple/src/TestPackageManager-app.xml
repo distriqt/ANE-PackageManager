@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/50.1">
+<application xmlns="http://ns.adobe.com/air/application/51.1">
     <id>com.distriqt.test</id>
     <filename>TestPackageManager</filename>
     <name>TestPackageManager</name>
@@ -35,7 +35,7 @@
 			</array>
 
             <key>MinimumOSVersion</key>
-            <string>11.0</string>
+            <string>12.0</string>
 
 		]]></InfoAdditions>
         <requestedDisplayResolution>high</requestedDisplayResolution>
@@ -49,7 +49,7 @@
     <android>
         <manifestAdditions><![CDATA[
 			<manifest android:installLocation="auto" >
-				<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="28" />
+				<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="34" />
 
 				<uses-permission android:name="android.permission.INTERNET"/>
 				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -87,6 +87,7 @@
         <extensionID>com.distriqt.Core</extensionID>
         <extensionID>com.distriqt.PackageManager</extensionID>
         <extensionID>androidx.core</extensionID>
+        <extensionID>com.jetbrains.kotlin</extensionID>
     </extensions>
 
 
